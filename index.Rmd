@@ -1,0 +1,55 @@
+---
+title: "Theme 3 R-project"
+author: "Richard Taylor"
+date: "31/05/2015"
+output: ioslides_presentation
+mode: selfcontained
+---
+
+## R statistical programming language:
+R <http://www.r-project.org/> is well worth learning if you are interested in Big Data and new communication through data
+
+- free, and available for all platforms
+- versatility - swiss army knife
+- decent documentation; great support
+---
+## Some packages I have used, for:
+
+- Big Data analysis - scholar
+- software integration - RNetLogo
+- combining visual and statistical analysis - igraph
+- visualising multidimensional data - ggplot2
+- interactive web applications - shiny
+- other dynamic web outputs
+    + presentations - slidify
+    + reports - knitr
+---
+## examples
+- Shiny see <https://richarit.shinyapps.io/shiny-simex/>
+- Scholar
+```{r, echo=FALSE}
+library(scholar)
+library(ggplot2)
+library(zoo)
+SEI.ids <- c("oqRgrAIAAAAJ&hl", "GXuL9-8AAAAJ&hl", "Cad6mKIAAAAJ&hl", "a0W9s1AAAAAJ&hl", "WDLy64sAAAAJ&hl", "gLI6MR0AAAAJ&hl","yV7mkpoAAAAJ&hl")
+cit.histories <- lapply(SEI.ids, get_citation_history)
+
+cit.zoo <- lapply(cit.histories, function(x) zoo(x,x$year))
+cites.zoo <-sapply(cit.zoo, function(x) subset(x, select=cites))
+df.cites.zoo <- do.call(merge,  cites.zoo)
+names(df.cites.zoo) <- SEI.ids
+
+profiles <- sapply(SEI.ids, get_profile)
+nscholars <- ncol(profiles)
+mfrow.cols <- 3
+mfrow.rows <- floor(nscholars /mfrow.cols)
+
+opar <- par(las = 1, mar = c(3, 3, 2, 2),las=1, cex.axis = 0.8, mfrow=c(mfrow.rows,mfrow.cols))
+for (x in c(1:prod(mfrow.rows,mfrow.cols))) {
+  sch <- SEI.ids [x]
+  history <- df.cites.zoo[,x]
+  plot(history, xlab = NA, ylab = NA)#, plot.type = "single", col = eight.cols, ylim=c(0,10), axes=FALSE, xlab = NA, ylab = NA, lty=3)#, xlab="Tick",ylab="Number of individuals")
+  
+  #ggplot(data=history, aes(x=year, y=cites)) # + geom_line(aes(linetype=name)) + theme_bw()
+}
+```

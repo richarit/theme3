@@ -29,8 +29,9 @@ R <http://www.r-project.org/> is well worth learning if you are interested in Bi
 ---
 
 ## examples
-- Shiny see <https://richarit.shinyapps.io/shiny-simex/>
-- Scholar
+- shiny see <https://richarit.shinyapps.io/shiny-simex/>
+- slidify see <http://richarit.github.io/theme3/>
+- scholar
 ```{r, echo=FALSE}
 library(scholar)
 library(ggplot2)

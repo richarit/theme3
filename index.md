@@ -29,6 +29,7 @@ R <http://www.r-project.org/> is well worth learning if you are interested in Bi
 ---
 
 ## examples
-- Shiny see <https://richarit.shinyapps.io/shiny-simex/>
-- Scholar
+- shiny see <https://richarit.shinyapps.io/shiny-simex/>
+- slidify see <http://richarit.github.io/theme3/>
+- scholar
 ![plot of chunk unnamed-chunk-1](assets/fig/unnamed-chunk-1-1.png) 

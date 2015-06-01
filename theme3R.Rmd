@@ -3,6 +3,7 @@ title: "Theme 3 R-project"
 author: "Richard Taylor"
 date: "31/05/2015"
 output: ioslides_presentation
+mode: selfcontained
 ---
 
 ## R statistical programming language:
@@ -11,7 +12,9 @@ R <http://www.r-project.org/> is well worth learning if you are interested in Bi
 - free, and available for all platforms
 - versatility - swiss army knife
 - decent documentation; great support
+
 ---
+
 ## Some packages I have used, for:
 
 - Big Data analysis - scholar
@@ -22,10 +25,13 @@ R <http://www.r-project.org/> is well worth learning if you are interested in Bi
 - other dynamic web outputs
     + presentations - slidify
     + reports - knitr
+
 ---
+
 ## examples
-- Shiny see <https://richarit.shinyapps.io/shiny-simex/>
-- Scholar
+- shiny see <https://richarit.shinyapps.io/shiny-simex/>
+- slidify see <http://richarit.github.io/theme3/>
+- scholar
 ```{r, echo=FALSE}
 library(scholar)
 library(ggplot2)
@@ -52,4 +58,3 @@ for (x in c(1:prod(mfrow.rows,mfrow.cols))) {
   #ggplot(data=history, aes(x=year, y=cites)) # + geom_line(aes(linetype=name)) + theme_bw()
 }
 ```
-

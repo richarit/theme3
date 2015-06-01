@@ -12,6 +12,7 @@ R <http://www.r-project.org/> is well worth learning if you are interested in Bi
 - free, and available for all platforms
 - versatility - swiss army knife
 - decent documentation; great support
+
 ---
 
 ## Some packages I have used, for:
@@ -24,6 +25,7 @@ R <http://www.r-project.org/> is well worth learning if you are interested in Bi
 - other dynamic web outputs
     + presentations - slidify
     + reports - knitr
+
 ---
 
 ## examples

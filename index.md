@@ -13,6 +13,7 @@ R <http://www.r-project.org/> is well worth learning if you are interested in Bi
 - versatility - swiss army knife
 - decent documentation; great support
 ---
+
 ## Some packages I have used, for:
 
 - Big Data analysis - scholar
@@ -24,6 +25,7 @@ R <http://www.r-project.org/> is well worth learning if you are interested in Bi
     + presentations - slidify
     + reports - knitr
 ---
+
 ## examples
 - Shiny see <https://richarit.shinyapps.io/shiny-simex/>
 - Scholar
